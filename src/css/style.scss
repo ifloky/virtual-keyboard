@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+  background-color: #353541;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 50px 5px;
+}
+
+.text-area {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 7px;
+  resize: none;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-gap: 7px;
+  align-items: center;
+  //background: linear-gradient(rgba(0, 87, 184,0.7) 50%, rgba(255, 216, 0.7) 50%); 
+
+  & .keyboard__btn {
+    min-width: 50px;
+    height: 50px;
+    background-color: #40414F;
+    color: aliceblue;
+    border: none;
+    border-radius: 7px;
+    position: relative;
+
+    & .keyboard__btn-sub-value {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      color:#f0f8ff56
+    }
+  }
+
+  & .keyboard__btn[data-code="Backspace"] {
+    grid-column: 14/16;
+  }
+
+  & .keyboard__btn[data-code="CAPSLOCK"] {
+    grid-column: 1/3;
+  }
+
+  & .keyboard__btn[data-code="ENTER"] {
+    grid-column: 14/16;
+  }
+
+  & .keyboard__btn[data-code="ENTER"] {
+    grid-column: 14/16;
+  }
+
+  & .keyboard__btn[data-code="SPACE"] {
+    grid-column: 4/11;
+  }
+
+  & .keyboard__btn[data-code="LSHIFT"] {
+    grid-column: 1/3;
+  }
+}
