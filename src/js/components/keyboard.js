@@ -1,16 +1,7 @@
-
-export function renderKeyboard(keys) {
-  const wrpr = document.createElement("section");
-  wrpr.classList.add("wrapper");
-  document.body.append(wrpr);
-
-  const txtArea = document.createElement("TEXTAREA");
-  txtArea.classList.add("text-area");
-  wrpr.append(txtArea);
-
+export function renderKeyboard(keys, wrapper) {
   const keyboard = document.createElement("div");
   keyboard.classList.add("keyboard");
-  wrpr.append(keyboard);
+  wrapper.append(keyboard);
 
   keys.map((key) => {
     let btn = document.createElement("button");
@@ -20,4 +11,5 @@ export function renderKeyboard(keys) {
     keyboard.append(btn);
   });
 }
+
 
