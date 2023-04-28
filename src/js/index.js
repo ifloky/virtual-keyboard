@@ -12,4 +12,4 @@ txtArea.classList.add("text-area");
 wrpr.append(txtArea);
 
 renderKeyboard(keys.keysEn, wrpr);
-enterBtn(renderKeyboard, keys, wrpr) 
+enterBtn(renderKeyboard, keys, wrpr);

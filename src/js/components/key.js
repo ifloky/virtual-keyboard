@@ -1,5 +1,5 @@
 export const keysEn = [
-  { code: "Backqoute", value: "`", subvalue: "~" },
+  { code: "Backquote", value: "`", subvalue: "~" },
   { code: "Digit1", value: "1", subvalue: "!" },
   { code: "Digit2", value: "2", subvalue: "@" },
   { code: "Digit3", value: "3", subvalue: "#" },
@@ -67,7 +67,7 @@ export const keysEn = [
 ];
 
 export const keysEnShift = [
-  { code: "Backqoute", value: "~", subvalue: "`" },
+  { code: "Backquote", value: "~", subvalue: "`" },
   { code: "Digit1", value: "!", subvalue: "1" },
   { code: "Digit2", value: "@", subvalue: "2" },
   { code: "Digit3", value: "#", subvalue: "3" },
@@ -135,7 +135,7 @@ export const keysEnShift = [
 ];
 
 export const keysRu = [
-  { code: "Backqoute", value: "ё", subvalue: "" },
+  { code: "Backquote", value: "ё", subvalue: "" },
   { code: "Digit1", value: "1", subvalue: "!" },
   { code: "Digit2", value: "2", subvalue: "\"" },
   { code: "Digit3", value: "3", subvalue: "№" },
@@ -203,7 +203,7 @@ export const keysRu = [
 ];
 
 export const keysRuShift = [
-  { code: "Backqoute", value: "ё", subvalue: "" },
+  { code: "Backquote", value: "ё", subvalue: "" },
   { code: "Digit1", value: "1", subvalue: "!" },
   { code: "Digit2", value: "2", subvalue: "\"" },
   { code: "Digit3", value: "3", subvalue: "№" },

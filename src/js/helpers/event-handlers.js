@@ -30,5 +30,23 @@ export function enterBtn(renderKeyboard, keys, wrpr) {
     }
   }
 
+  document.addEventListener('keydown', (e) => {
+    for (let i = 0; i < keysBtn.length; i++) {
+      if (e.code === keysBtn[i].dataset.code) {
+        keysBtn[i].classList.add('activeBtn')
+        txtArea.textContent += keysBtn[i].textContent[0];
+      }
+    }
+    
+  });
+
+  document.addEventListener('keyup', (e) => {
+    for (let i = 0; i < keysBtn.length; i++) {
+      if (e.code === keysBtn[i].dataset.code) {
+        keysBtn[i].classList.remove('activeBtn')
+      }
+      
+    }
+  });
 
 }
