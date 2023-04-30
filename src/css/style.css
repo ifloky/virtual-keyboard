@@ -25,7 +25,7 @@ body {
   resize: none;
   padding: 10px 20px;
   box-sizing: border-box;
-  font-size: calc((1vw + 1vh) * 0.6);
+  font-size: calc(1vw + 1vh);
 }
 
 .keyboard {

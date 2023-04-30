@@ -1,15 +1,19 @@
 import { renderKeyboard } from "./components/keyboard.js"
 import * as keys from "./components/key.js"
-import { enterBtn } from "./helpers/event-handlers.js";
+import { enterBtn } from "./components/event-handlers.js";
+import { handleShiftAlt } from "./components/lang-switch.js"
 
 
-const wrpr = document.createElement("section");
-wrpr.classList.add("wrapper");
-document.body.append(wrpr);
+const wrapper = document.createElement("section");
+wrapper.classList.add("wrapper");
+document.body.append(wrapper);
 
 const txtArea = document.createElement("TEXTAREA");
 txtArea.classList.add("text-area");
-wrpr.append(txtArea);
+wrapper.append(txtArea);
 
-renderKeyboard(keys.keysEn, wrpr);
-enterBtn(renderKeyboard, keys, wrpr);
+
+let lang = localStorage.getItem("Lang") ? localStorage.getItem("Lang") : "keysEn";
+renderKeyboard(keys[lang], wrapper, txtArea);
+handleShiftAlt(renderKeyboard, keys, wrapper, lang, txtArea);
+enterBtn(txtArea, wrapper, lang);
