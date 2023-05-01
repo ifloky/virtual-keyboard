@@ -52,13 +52,6 @@ export function enterBtn(txtArea,wrapper,lang) {
     }
   });
 
-  
-  // document.addEventListener('keydown', (e) => {
-  //   if (keysBtn[i].dataset.code === "Backspace") {
-
-  //   }
-  // });
-
 
   document.addEventListener('keyup', (e) => {
     for (let i = 0; i < keysBtn.length; i++) {

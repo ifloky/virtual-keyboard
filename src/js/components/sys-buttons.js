@@ -39,6 +39,10 @@ export function sysBtnClick(renderKeyboard, wrapper, lang,txtArea) {
             txtArea.selectionEnd = cursorPosition;
           }
       
+    } else if (e.target.dataset.code === 'Space' || e.target.dataset.code === 'Tab') {
+        txtArea.value = txtArea.value.slice(0, cursorPosition) + " " + txtArea.value.slice(cursorPosition);
+        txtArea.selectionStart = cursorPosition + 1;
+        txtArea.selectionEnd = cursorPosition + 1;
     }
   });
 
