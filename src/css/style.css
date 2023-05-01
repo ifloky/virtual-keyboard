@@ -76,4 +76,10 @@ body {
 
 .activeBtn {
   background-color: #5aad68 !important;
+}
+
+.info-block {
+  display: flex;
+  color: #fefefe;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */

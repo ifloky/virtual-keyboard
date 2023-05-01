@@ -3,13 +3,19 @@ import { enterBtn } from "./event-handlers.js";
 export function handleShiftAlt(renderKeyboard, keys, wrpr, lang, txtArea) {
     let shiftPressed = false;
     let altPressed = false;
-  
+
     document.addEventListener('click', (e) => {
+      let removeStyleBtn = document.querySelectorAll(".keyboard__btn");
+        removeStyleBtn.forEach((e)=>{
+        e.classList.remove("activeBtn")
+      })
       if (e.target.dataset.code === "ShiftLeft") {
         shiftPressed = true;
+        e.target.classList.add("activeBtn");
       }
       if (e.target.dataset.code === "AltLeft") {
         altPressed = true;
+        e.target.classList.add("activeBtn");
       }
   
       if (shiftPressed && altPressed) {

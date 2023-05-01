@@ -1,3 +1,4 @@
+
 export function renderKeyboard(keys, wrapper) {
   const keyboard = document.createElement("div");
   keyboard.classList.add("keyboard");

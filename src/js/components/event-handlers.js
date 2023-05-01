@@ -1,9 +1,8 @@
+import { sysBtnClick } from "./sys-buttons.js";
 import { renderKeyboard } from "./keyboard.js";
-import * as keys from "./key.js"
 
-export function enterBtn(txtArea, wrapper, lang) {
+export function enterBtn(txtArea,wrapper,lang) {
   const keysBtn = document.querySelectorAll('.keyboard__btn');
-  let shiftdown = true;
 
   for (let k of keysBtn) {
     k.addEventListener('click', function clickKey(e) {
@@ -27,25 +26,6 @@ export function enterBtn(txtArea, wrapper, lang) {
       }
     });
   }
-
-  document.addEventListener('click', (e) => {
-    if (e.target.dataset.code === 'Backspace' && txtArea.value.length > 0){
-      txtArea.value = txtArea.value.slice(0, -1);
-    } else if (e.target.dataset.code === 'Enter'){
-      txtArea.value += "\n";
-    } else if (e.target.dataset.code === 'CapsLock'){
-      if (shiftdown) {
-        shiftdown = false;
-        let shiftLang = lang+`Shift`;
-        wrapper.removeChild(document.querySelector(".keyboard"));
-        renderKeyboard(keys[shiftLang], wrapper);
-      } else {
-        shiftdown = true;
-        wrapper.removeChild(document.querySelector(".keyboard"));
-        renderKeyboard(keys[lang], wrapper);
-      }
-    }
-  });
 
   document.addEventListener('keydown', (e) => {
     for (let i = 0; i < keysBtn.length; i++) {
@@ -73,11 +53,11 @@ export function enterBtn(txtArea, wrapper, lang) {
   });
 
   
-  document.addEventListener('keydown', (e) => {
-    if (keysBtn[i].dataset.code === "Backspace") {
+  // document.addEventListener('keydown', (e) => {
+  //   if (keysBtn[i].dataset.code === "Backspace") {
 
-    }
-  });
+  //   }
+  // });
 
 
   document.addEventListener('keyup', (e) => {
