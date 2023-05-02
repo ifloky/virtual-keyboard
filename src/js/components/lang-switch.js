@@ -54,4 +54,5 @@ export function handleShiftAlt(renderKeyboard, keys, wrpr, lang, txtArea) {
       enterBtn(txtArea, wrpr, lang);
     }
   });
+
 }

@@ -39,7 +39,6 @@ export function sysBtnClick(renderKeyboard, wrapper, lang, txtArea) {
         txtArea.selectionStart = cursorPosition;
         txtArea.selectionEnd = cursorPosition;
       }
-
     } else if (e.target.dataset.code === 'Space' || e.target.dataset.code === 'Tab') {
       txtArea.value = txtArea.value.slice(0, cursorPosition) + " " + txtArea.value.slice(cursorPosition);
       txtArea.selectionStart = cursorPosition + 1;
@@ -66,7 +65,7 @@ export function sysBtnClick(renderKeyboard, wrapper, lang, txtArea) {
         wrapper.removeChild(document.querySelector(".keyboard"));
         shiftdown = true;
         renderKeyboard(keys[shiftLang], wrapper);
-        enterBtn(txtArea, wrapper, lang);
+        enterBtn(txtArea, wrapper, lang); s
       } else {
         shiftdown = false;
         wrapper.removeChild(document.querySelector(".keyboard"));
@@ -88,6 +87,5 @@ export function sysBtnClick(renderKeyboard, wrapper, lang, txtArea) {
       txtArea.selectionEnd = cursorPosition + 1;
     }
   });
-
 
 }
