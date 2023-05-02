@@ -5,6 +5,7 @@ export function handleShiftAlt(renderKeyboard, keys, wrpr, lang, txtArea) {
   let altPressed = false;
 
   document.addEventListener('click', (e) => {
+    txtArea.focus();
     let removeStyleBtn = document.querySelectorAll(".keyboard__btn");
     removeStyleBtn.forEach((e) => {
       e.classList.remove("activeBtn")
@@ -31,6 +32,7 @@ export function handleShiftAlt(renderKeyboard, keys, wrpr, lang, txtArea) {
   });
 
   document.addEventListener('keydown', (e) => {
+    txtArea.focus();
     let removeStyleBtn = document.querySelectorAll(".keyboard__btn");
     removeStyleBtn.forEach((e) => {
     })

@@ -6,6 +6,7 @@ let shiftdown = false
 export function sysBtnClick(renderKeyboard, wrapper, lang, txtArea) {
 
   document.addEventListener('click', (e) => {
+    txtArea.focus();
     const cursorPosition = txtArea.selectionStart;
     if (e.target.dataset.code === 'Backspace' && txtArea.value.length > 0) {
       if (cursorPosition > 0) {
@@ -47,6 +48,7 @@ export function sysBtnClick(renderKeyboard, wrapper, lang, txtArea) {
   });
 
   document.addEventListener('keydown', (e) => {
+    txtArea.focus();
     const cursorPosition = txtArea.selectionStart;
     if (e.code === 'Backspace' && txtArea.value.length > 0) {
       if (cursorPosition > 0) {

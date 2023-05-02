@@ -1,7 +1,7 @@
 import { sysBtnClick } from "./sys-buttons.js";
 import { renderKeyboard } from "./keyboard.js";
 
-export function enterBtn(txtArea,wrapper,lang) {
+export function enterBtn(txtArea) {
   const keysBtn = document.querySelectorAll('.keyboard__btn');
 
   for (let k of keysBtn) {
@@ -19,10 +19,11 @@ export function enterBtn(txtArea,wrapper,lang) {
         dataCode === "AltLeft" ||
         dataCode === "AltRight" ||
         dataCode === "Tab" ||
-        dataCode === "Delete" ) {
+        dataCode === "Delete") {
         e.preventDefault()
       } else {
         txtArea.value += k.textContent[0];
+        txtArea.focus();
       }
     });
   }
@@ -32,21 +33,22 @@ export function enterBtn(txtArea,wrapper,lang) {
       if (e.code === keysBtn[i].dataset.code) {
         keysBtn[i].classList.add('activeBtn');
         if (keysBtn[i].dataset.code === "Backspace" ||
-        keysBtn[i].dataset.code === "CapsLock" ||
-        keysBtn[i].dataset.code === "Enter" ||
-        keysBtn[i].dataset.code === "MetaLeft" ||
-        keysBtn[i].dataset.code === "Space" ||
-        keysBtn[i].dataset.code === "ShiftLeft" ||
-        keysBtn[i].dataset.code === "ShiftRight" ||
-        keysBtn[i].dataset.code === "ControlLeft" ||
-        keysBtn[i].dataset.code === "ControlRight" ||
-        keysBtn[i].dataset.code === "AltLeft" ||
-        keysBtn[i].dataset.code === "AltRight"||
-        keysBtn[i].dataset.code === "Tab" ||
-        keysBtn[i].dataset.code === "Delete") {
+          keysBtn[i].dataset.code === "CapsLock" ||
+          keysBtn[i].dataset.code === "Enter" ||
+          keysBtn[i].dataset.code === "MetaLeft" ||
+          keysBtn[i].dataset.code === "Space" ||
+          keysBtn[i].dataset.code === "ShiftLeft" ||
+          keysBtn[i].dataset.code === "ShiftRight" ||
+          keysBtn[i].dataset.code === "ControlLeft" ||
+          keysBtn[i].dataset.code === "ControlRight" ||
+          keysBtn[i].dataset.code === "AltLeft" ||
+          keysBtn[i].dataset.code === "AltRight" ||
+          keysBtn[i].dataset.code === "Tab" ||
+          keysBtn[i].dataset.code === "Delete") {
           e.preventDefault()
         } else {
           txtArea.value += keysBtn[i].textContent[0];
+          txtArea.focus();
         }
       }
     }
