@@ -1,30 +1,30 @@
 export default {
-  "env": {
-    "browser": true,
-    "es6": true
+  env: {
+    browser: true,
+    es6: true,
   },
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module"
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: 'module',
   },
-  "rules": {
-    "indent": [
-      "error",
-      2
+  rules: {
+    indent: [
+      'error',
+      2,
     ],
-    "quotes": [
-      "error",
-      "double"
+    quotes: [
+      'error',
+      'double',
     ],
-    "semi": [
-      "error",
-      "always"
+    semi: [
+      'error',
+      'always',
     ],
-    "no-unused-vars": [
-      "error",
+    'no-unused-vars': [
+      'error',
       {
-        "argsIgnorePattern": "^_"
-      }
-    ]
-  }
+        argsIgnorePattern: '^_',
+      },
+    ],
+  },
 };
