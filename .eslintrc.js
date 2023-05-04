@@ -1,30 +1,12 @@
 export default {
-  env: {
-    browser: true,
-    es6: true,
+  "env": {
+    "browser": true,
+    "es2021": true
   },
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module',
+  "extends": "airbnb-base",
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest"
   },
-  rules: {
-    indent: [
-      'error',
-      2,
-    ],
-    quotes: [
-      'error',
-      'double',
-    ],
-    semi: [
-      'error',
-      'always',
-    ],
-    'no-unused-vars': [
-      'error',
-      {
-        argsIgnorePattern: '^_',
-      },
-    ],
-  },
-};
+  "rules": {}
+}
